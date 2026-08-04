@@ -31,7 +31,11 @@ const Tarefa = ({
   }
   return (
     <S.Card>
-      <S.Titulo>{titulo}</S.Titulo>
+      <label htmlFor={titulo}>
+        {' '}
+        <input type="checkbox" id={titulo} />
+        <S.Titulo>{titulo}</S.Titulo>
+      </label>{' '}
       <S.Tag parametro="prioridade" prioridade={prioridade}>
         {prioridade}
       </S.Tag>

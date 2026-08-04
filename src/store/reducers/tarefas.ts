@@ -57,9 +57,13 @@ const tarefasSlice = createSlice({
       } else {
         state.itens.push(action.payload)
       }
-    }
+    },
+    alteraStatus: (
+      state,
+      action: PayloadAction<{ id: number; finalizado: boolean }>
+    ) => {}
   }
 })
 
-export const { remover, editar } = tarefasSlice.actions
+export const { remover, editar, cadastrar } = tarefasSlice.actions
 export default tarefasSlice.reducer
